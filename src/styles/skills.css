@@ -1,0 +1,187 @@
+.body-skill {
+  width: 83%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+  color: white;
+  border-radius: 15px;
+  perspective: 1200px;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: 150px;
+}
+
+.skills-title {
+  font-size: 2rem;
+  /* margin-bottom: 60px; */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.skills-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skills-ring {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: spin 20s linear infinite;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.skills-ring.visible {
+  opacity: 1;
+}
+
+.skill-card {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * (360deg / var(--total)))) translateZ(350px); /* increased depth */
+  background: #111;
+  border-radius: 15px;
+  width: 150px; /* was 110px */
+  height: 170px; /* was 130px */
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.skill-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #e8e8e8;
+  text-shadow: 0 0 15px rgb(0 0 0 / 60%);
+  text-align: left;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #333333;
+  padding: 5px 0px 5px 10px;
+  width: 92%;
+  margin-top: 20px;
+  border: none;
+  padding-right: 15%;
+}
+
+.skill-card img {
+  width: 70px; /* was 55px */
+  height: 70px; /* was 55px */
+  margin-top: 25px;
+  object-fit: contain;
+}
+
+.skill-card p {
+  margin-top: 12px;
+  font-size: 1rem; /* add this to make text scale nicely */
+  font-weight: 600;
+}
+
+.skill-card:hover {
+  transform: scale(1.1) rotateY(calc(var(--i) * (360deg / var(--total))))
+    translateZ(300px); /* was 240px */
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+/* Smooth rotation */
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@media (max-width: 1140px) {
+  .skill-card {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * (360deg / var(--total))))
+      translateZ(300px); /* increased depth */
+    background: #111;
+    border-radius: 15px;
+    width: 150px; /* was 110px */
+    height: 170px; /* was 130px */
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+}
+
+@media (max-width: 1000px) {
+  .skill-card {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * (360deg / var(--total))))
+      translateZ(250px); /* increased depth */
+    background: #111;
+    border-radius: 15px;
+    width: 150px; /* was 110px */
+    height: 170px; /* was 130px */
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+}
+
+@media (max-width: 876px) {
+  .skill-card {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * (360deg / var(--total))))
+      translateZ(200px); /* increased depth */
+    background: #111;
+    border-radius: 15px;
+    width: 100px; /* was 110px */
+    height: 120px; /* was 130px */
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  .skill-card img {
+    width: 50px; /* was 55px */
+    height: 50px; /* was 55px */
+    margin-top: 25px;
+    object-fit: contain;
+  }
+}
+@media (max-width: 668px) {
+  .skill-card {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * (360deg / var(--total))))
+      translateZ(150px); /* increased depth */
+    background: #111;
+    border-radius: 15px;
+    width: 90px; /* was 110px */
+    height: 110px; /* was 130px */
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  .skill-card img {
+    width: 45px; /* was 55px */
+    height: 45px; /* was 55px */
+    margin-top: 25px;
+    object-fit: contain;
+  }
+}

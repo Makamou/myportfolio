@@ -1,0 +1,85 @@
+.portfolio-navbar {
+  height: 90px;
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #333333, #444444);
+  margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  z-index: 10;
+  box-sizing: border-box;
+
+  /* allow content to shrink */
+  flex-wrap: wrap;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-shrink: 1;
+}
+
+.portfolio-logo {
+  height: 70px;
+  width: auto;
+  max-width: 180px;
+  transition: all 0.3s ease;
+}
+
+/* ---------- Responsive: Shrinks and stacks ---------- */
+@media (max-width: 900px) {
+  .portfolio-navbar {
+    padding: 0 40px;
+  }
+
+  .navbar-right button {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-logo {
+    height: 60px;
+  }
+
+  .navbar-right button {
+    font-size: 0.85rem;
+    padding: 5px 8px;
+  }
+}
+
+.nav-btn.active {
+  background: #00eaff;
+  color: #111;
+  border-color: #00eaff;
+  box-shadow: 0 0 10px #00eaff;
+}

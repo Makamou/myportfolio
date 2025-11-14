@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+h2 {
+  margin: 0;
+  text-align: center;
+}
+
+html,
+body {
+  min-width: 551px;
+  /* min-height: 948px; 
+  /* overflow-x: auto; /* allows horizontal scroll if needed 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; */
+}
+
+.page-wrapper {
+  min-width: 551px;
+  /* min-height: 948px; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; */
+}

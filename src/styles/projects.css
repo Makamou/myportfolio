@@ -1,0 +1,118 @@
+/* ---------- Projects Section ---------- */
+.body-project {
+  /* padding: 80px 0; */
+  /* background: linear-gradient(145deg, #0d0d0d, #1a1a1a); */
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  /* margin-top: 60px; */
+  width: 83%;
+}
+
+.projects-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #e8e8e8;
+  text-shadow: 0 0 15px rgb(0 0 0 / 60%);
+  text-align: left;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #333333;
+  margin-left: 7px;
+}
+
+/* ---------- Project Grid ---------- */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* ---------- Individual Card ---------- */
+.project-item {
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 234, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 234, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0, 234, 255, 0.4);
+}
+
+/* ---------- Project Image ---------- */
+.project-image {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.4s ease;
+}
+
+.project-item:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* ---------- Description ---------- */
+.project-description {
+  padding: 25px 20px;
+  text-align: center;
+  color: #111;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background: #fefefe;
+}
+
+.project-description h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.project-description p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* ---------- Remove default link style ---------- */
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .project-description h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-description p {
+    font-size: 0.9rem;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .bodySize {
+    /* margin: 20px; */
+    /* padding: 20px; */
+  }
+}
+.nav-btn.active {
+  background: #00eaff;
+  color: #111;
+  border-color: #00eaff;
+  box-shadow: 0 0 10px #00eaff;
+}
