@@ -49,7 +49,7 @@ export default function Navbar() {
       </div>
 
       <div className="navbar-right">
-        {["About", "Projects", "Skills", "Contact"].map((btn) => (
+        {["About", "Skills", "Projects", "Contact"].map((btn) => (
           <button
             key={btn}
             className={`nav-btn ${activeButton === btn ? "active" : ""}`}
