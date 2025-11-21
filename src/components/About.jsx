@@ -3,7 +3,7 @@ import profile from "../assets/myPicture-blackWhitejpg.jpg";
 
 export default function About() {
   return (
-    <div id="About" className="body-about bodySize">
+    <div id="about" className="body-about bodySize">
       <img src={profile} className="profile-image" alt="Moubarak Akamou" />
       <p className="about-text">
         Hey there! I’m <strong>Moubarak Akamou</strong>, a dedicated web
