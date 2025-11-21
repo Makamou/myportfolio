@@ -21,7 +21,7 @@ export default function Navbar() {
   // Detect which section is in view
   useEffect(() => {
     const sections = document.querySelectorAll(
-      " #About,#projects, #skills, #contact"
+      " #about,#projects, #skills, #contact"
     );
 
     const observer = new IntersectionObserver(
